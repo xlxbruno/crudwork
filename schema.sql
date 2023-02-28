@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS posts;
+
+CREATE TABLE posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL ,
+    price INT NOT NULL,
+    image VARBINARY NOT NULL
+);
+
+
+

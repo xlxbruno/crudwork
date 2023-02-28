@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Add new item {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Item Name</label>
+        <input type="text" name="title" placeholder="Name" class="form-control"
+               value="{{ request.form['title'] }}" >
+    </div>
+
+    <div class="form-control">
+        <label for="image">Item Image</label>
+        <div class="form-group">
+        <input type="image" name="title" placeholder="Add image here" class="form-control"
+        value="{{ request.form['image'] }}">
+        </div>
+
+    <div class="form-control">
+        <label for="price">Add Price</label>
+        <input type="text" name="price" placeholder="Kes " class="form-control"
+        value="{{ request.form['price'] }}">
+    </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
+{% endblock %}
