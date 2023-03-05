@@ -58,13 +58,14 @@ def edit(id):
     if request.method == 'POST':
         title = request.form['title']
         price = request.form['price']
+        image = request.form['image']
 
         if not title:
             flash('Title is required')
         else:
             conn = get_db_connection()
-            conn.execute('UPDATE posts SET title = ?, price = ?'
-                         'WHERE id = ?', (title, price))
+            conn.execute('UPDATE posts SET title = ?, price = ?, image = ?'
+                         'WHERE id = ?', (id, title, price, image))
             conn.commit()
             conn.close()
             return redirect(url_for('index'))

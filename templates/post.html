@@ -4,10 +4,10 @@
     <h2>{% block title %}{{ post['title'] }} {% endblock %}</h2>
 
     <div>
-        <h3>{{ post['content'] }}</h3>
+        <h3>{{ post['price'] }}</h3>
     </div>
 
-    <div>
-      <img src="{{ post['image'] }}" height="500px" width="500px">
+    <div class="card-img">
+      <img src="{{ post['image'] }}" height="" width="">
     </div>
 {% endblock %}
